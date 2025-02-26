@@ -3,7 +3,7 @@ import Logo from "../assets/aseri.jpeg";
 
 const Title = () => (
   <a href="/">
-    <img className="h-24 p-2 " src={Logo} alt="logo" />
+    <img className="h-24 p-2 rounded-full " src={Logo} alt="logo" />
   </a>
 );
 
