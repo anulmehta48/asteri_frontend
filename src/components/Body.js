@@ -109,7 +109,7 @@ const Body = () => {
           <h1 className="text-4xl md:text-5xl mx-7">
             Simple and reliable solutions
           </h1>
-          <div className="space-y-10 mt-10 md:flex md:space-x-8 mx-8 ">
+          <div className="space-y-10 mt-10 md:flex md:space-x-8 mx-8 md:justify-center">
             <div className="space-y-1.5">
               <h1 className="font-light text-3xl ">Full warranty</h1>
               <p className="font-extralight text-xl text-wrap">
@@ -140,7 +140,7 @@ const Body = () => {
             <img
               src={IMG_PROD_CDN_URL}
               alt="toy"
-              className="h-[520] w-[650] rounded-2xl scale-110"
+              className="md:h-[520] md:w-[650] rounded-2xl scale-110"
             />
           </div>
           <div className="text-white mt-10 mx-10">
@@ -201,12 +201,37 @@ const Body = () => {
           </div>
         </div>
       </div>
-
-      <div className="bg-white py-16">
-        <div className="text-black max-w-6xl mx-auto px-4">
-          <h1>Testimonials from our satisfied customers </h1>
+      {/*//container-5 */}
+      <div className="bg-white py-5 md:py-16">
+        <div className="text-white max-w-6xl mx-2 md:mx-auto md:p-10 bg-black space-y-2.5 rounded-2xl">
+          <div className="text-4xl md:text-5xl md:font-normal text-wrap font-medium p-5">
+            <h1>Testimonials from our satisfied customers </h1>
+          </div>
+          <div className="space-y-5 text-wrap p-5 md:justify-between md:space-x-7 md:space-y-0 md:flex md:gap-6">
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+              <h1 className="text-3xl font-light">Johan</h1>
+              <p className="text-xl font-light italic">
+                25% reduction on our bills thanks to these sensors.
+              </p>
+            </div>
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+              <h1 className="text-3xl font-light">Karen</h1>
+              <p className="text-xl font-light italic">
+                Return on investment in less than 2 years thanks to cost
+                reductions.
+              </p>
+            </div>
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+              <h1 className="text-3xl font-light">Heusia</h1>
+              <p className="text-xl font-light italic">
+                Loyalty of tenants, who really appreciate our ecological
+                commitment
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
       <div className="bg-black py-16">
         <div className="text-white max-w-6xl mx-auto px-4">
           <h1>A profitable and ecological investment</h1>
