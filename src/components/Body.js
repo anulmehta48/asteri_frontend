@@ -1,4 +1,11 @@
-import { IMG_HEAD_CDN_URL, IMG_WAR_CDN_URL } from "../config";
+import {
+  IMG_HEAD_CDN_URL,
+  IMG_WAR_CDN_URL,
+  POWER_SVG_URL,
+  PROFIT_SVG_URL,
+  SUSTAIN_SVG_URL,
+  SUTISFY_SVG_URL,
+} from "../config";
 import { IMG_TOY_CDN_URL } from "../config";
 import { IMG_PROD_CDN_URL } from "../config";
 const Body = () => {
@@ -7,9 +14,10 @@ const Body = () => {
       {/* //container-1 */}
       <div
         style={{ backgroundImage: `url(${IMG_HEAD_CDN_URL})` }}
-        className="py-16 bg-cover bg-center bg-no-repeat "
+        className="relative py-16 bg-cover bg-center bg-no-repeat  "
       >
-        <div className="text-white max-w-6xl mx-auto px-4 md:pl-14 ">
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="relative text-white max-w-6xl mx-auto px-4 md:pl-14 ">
           <div className="space-y-4 mt-10 md:space-y-8 md:mt-14">
             <h1>Hello👋</h1>
             <h1 className="text-4xl md:text-5xl">
@@ -33,13 +41,13 @@ const Body = () => {
       </div>
       {/* //container-2 */}
       <div className="bg-black py-16 ">
-        <div className="text-white max-w-6xl mx-auto  md:gap-20 md:justify-center lg:flex">
+        <div className="text-white max-w-6xl mx-auto  md:gap-20 md:justify-center md:flex">
           {/* Image div */}
-          <div className="lg:flex  ">
+          <div className="lg:flex md:mx-10 ">
             <img
               src={IMG_TOY_CDN_URL}
               alt="toy"
-              className="size-96 md:h-[650] md:w-[440] md:rounded-xl"
+              className="size-96 md:h-[650] md:w-[440] md:rounded-xl "
             />
           </div>
           {/* Text div */}
@@ -140,7 +148,7 @@ const Body = () => {
             <img
               src={IMG_PROD_CDN_URL}
               alt="toy"
-              className="md:h-[520] md:w-[650] rounded-2xl scale-110"
+              className="md:h-[520] md:w-[650] md:rounded-2xl "
             />
           </div>
           <div className="text-white mt-10 mx-10">
@@ -207,21 +215,21 @@ const Body = () => {
           <div className="text-4xl md:text-5xl md:font-normal text-wrap font-medium p-5">
             <h1>Testimonials from our satisfied customers </h1>
           </div>
-          <div className="space-y-5 text-wrap p-5 md:justify-between md:space-x-7 md:space-y-0 md:flex md:gap-6">
-            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+          <div className="space-y-5 text-wrap p-5 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2 md:h-full">
               <h1 className="text-3xl font-light">Johan</h1>
               <p className="text-xl font-light italic">
                 25% reduction on our bills thanks to these sensors.
               </p>
             </div>
-            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2 md:h-full">
               <h1 className="text-3xl font-light">Karen</h1>
               <p className="text-xl font-light italic">
                 Return on investment in less than 2 years thanks to cost
                 reductions.
               </p>
             </div>
-            <div className="bg-gray-600 rounded-xl p-5 space-y-2">
+            <div className="bg-gray-600 rounded-xl p-5 space-y-2 md:h-full">
               <h1 className="text-3xl font-light">Heusia</h1>
               <p className="text-xl font-light italic">
                 Loyalty of tenants, who really appreciate our ecological
@@ -231,10 +239,57 @@ const Body = () => {
           </div>
         </div>
       </div>
-
+      {/*//container-6 */}
       <div className="bg-black py-16">
         <div className="text-white max-w-6xl mx-auto px-4">
-          <h1>A profitable and ecological investment</h1>
+          <div className=" text-4xl p-5 md:text-5xl text-wrap">
+            <h1>A profitable and ecological investment</h1>
+          </div>
+          <div className="p-5 text-wrap space-y-10 grid grid-cols-1 md:grid-cols-4 md:gap-5 ">
+            <div className=" md:h-full">
+              <img
+                src={POWER_SVG_URL}
+                alt="power"
+                className="h-10 invert brightness-0 mb-4"
+              />
+              <h1 className="text-3xl">Savings</h1>
+              <p className="text-2xl font-light">Reduced electricity bills</p>
+            </div>
+            <div className="  md:h-full">
+              <img
+                src={SUSTAIN_SVG_URL}
+                alt="sustain"
+                className="h-10 invert brightness-0 mb-4"
+              />
+              <h1 className="text-3xl">Sustainability</h1>
+              <p className="text-2xl font-light">
+                Reduced environmental footprint
+              </p>
+            </div>
+            <div className="  md:h-full">
+              <img
+                src={SUTISFY_SVG_URL}
+                alt="sutisfy"
+                className="h-10 invert brightness-0 mb-4"
+                mb-4
+              />
+              <h1 className="text-3xl">Satisfaction</h1>
+              <p className="text-2xl font-light">
+                Customer expectations met, loyalty strengthened
+              </p>
+            </div>
+            <div className="  md:h-full">
+              <img
+                src={PROFIT_SVG_URL}
+                alt="profit"
+                className="h-10 invert brightness-0 mb-4"
+              />
+              <h1 className="text-3xl">Profitability</h1>
+              <p className="text-2xl font-light">
+                Return on investment in less than 2 years
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div

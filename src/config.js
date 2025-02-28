@@ -9,3 +9,15 @@ export const IMG_PROD_CDN_URL =
 
 export const IMG_WAR_CDN_URL =
   "https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2400/https://cdn.gamma.app/56qjevrjzy5s61c/generated-images/9JmzNLSqBSod-OPgpZZy6.jpg";
+
+export const POWER_SVG_URL =
+  "https://cdn.gamma.app/_app_static/icons/v0/square-bolt.svg";
+
+export const SUSTAIN_SVG_URL =
+  "https://cdn.gamma.app/_app_static/icons/v0/sensor-on.svg";
+
+export const SUTISFY_SVG_URL =
+  "https://cdn.gamma.app/_app_static/icons/v0/person-military-pointing.svg";
+
+export const PROFIT_SVG_URL =
+  "https://cdn.gamma.app/_app_static/icons/v0/chart-mixed-up-circle-dollar.svg";
