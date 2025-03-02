@@ -30,10 +30,10 @@ const Body = () => {
             </p>
           </div>
           <div className="flex flex-col gap-2 md:flex-row">
-            <button className="bg-white font-bold rounded-md text-black py-3 border-black md:p-3 ">
+            <button className="bg-white font-bold rounded-md text-black py-3 border-black md:p-3 cursor-pointer">
               Discover the solutions
             </button>
-            <button className="bg-black rounded-md text-white font-bold py-3 border md:p-3 ">
+            <button className="bg-black rounded-md text-white font-bold py-3 border md:p-3 cursor-pointer ">
               Contact us
             </button>
           </div>
@@ -292,20 +292,99 @@ const Body = () => {
           </div>
         </div>
       </div>
+      {/*//container-6 */}
       <div
         style={{ backgroundImage: `url(${IMG_WAR_CDN_URL})` }}
-        className="py-16 bg-cover bg-center bg-no-repeat"
+        className="relative py-16 bg-cover bg-center bg-no-repeat"
       >
-        <div className="text-white max-w-6xl mx-auto px-4">
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="max-w-4xl mx-auto ">
+          <h2 className="relative text-4xl text-white mb-10 mx-5 md:mx-auto">
+            Start your ecological transition now
+          </h2>
+          <div className="relative  space-y-5 mx-5 md:mx-auto">
+            {/* Step 1 */}
+            <div className=" flex items-start gap-6">
+              <div className="relative flex flex-col items-center text-white font-bold text-xl">
+                <svg
+                  width="80"
+                  height="160"
+                  viewBox="0 0 80 160"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="fill-gray-600"
+                >
+                  <path d="M 0 138.59375 L 40 154.59375 L 80 138.59375 L 80 0 L 40 16 L 0 0 Z" />
+                </svg>
+                <span className="absolute top-[50%] translate-y-[-50%] text-white">
+                  1
+                </span>
+              </div>
+              <div className=" text-white space-y-2">
+                <h3 className="text-xl font-semibold">Needs assessment</h3>
+                <p>
+                  Analysis of your real estate portfolio: we carry out an{" "}
+                  <strong>on-site visit</strong> to assess the specific needs of
+                  the accommodation.
+                </p>
+              </div>
+            </div>
+            {/* Step 2 */}
+            <div className="flex items-start gap-6">
+              <div className="relative flex flex-col items-center text-white font-bold text-xl">
+                <svg
+                  width="80"
+                  height="160"
+                  viewBox="0 0 80 160"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="fill-gray-600"
+                >
+                  <path d="M 0 138.59375 L 40 154.59375 L 80 138.59375 L 80 0 L 40 16 L 0 0 Z" />
+                </svg>
+                <span className="absolute top-[50%] translate-y-[-50%] text-white">
+                  2
+                </span>
+              </div>
+              <div className=" text-white space-y-2">
+                <h3 className="text-xl font-semibold">
+                  Sensor installation and scenario definitions
+                </h3>
+                <ul className="list-disc list-inside ">
+                  <li>Quick and discreet installation.</li>
+                  <li>
+                    Programming according to lifestyle habits and configuration
+                    of switch-on and switch-off time slots.
+                  </li>
+                  <li>
+                    Integration with other home automation systems (lighting,
+                    security).
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* Step 3 */}
+            <div className="flex items-start gap-6">
+              <div className="relative flex flex-col items-center text-white font-bold text-xl">
+                <svg
+                  width="80"
+                  height="160"
+                  viewBox="0 0 80 160"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="fill-gray-600"
+                >
+                  <path d="M 0 138.59375 L 40 154.59375 L 80 138.59375 L 80 0 L 40 16 L 0 0 Z" />
+                </svg>
+                <span className="absolute top-[50%] translate-y-[-50%] text-white">
+                  3
+                </span>
+              </div>
+              <div className=" text-white space-y-2">
+                <h3 className="text-xl font-semibold">
+                  Continuous optimization of your scenarios
+                </h3>
+                <p>Continuous monitoring and adjustments.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
