@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   IMG_HEAD_CDN_URL,
   IMG_WAR_CDN_URL,
@@ -5,10 +6,13 @@ import {
   PROFIT_SVG_URL,
   SUSTAIN_SVG_URL,
   SUTISFY_SVG_URL,
+  IMG_TOY_CDN_URL,
+  IMG_PROD_CDN_URL,
 } from "../config";
-import { IMG_TOY_CDN_URL } from "../config";
-import { IMG_PROD_CDN_URL } from "../config";
+
 const Body = () => {
+  // const { t } = useTranslation();
+  // const {line1,line2}=t("description")
   return (
     <>
       {/* //container-1 */}
