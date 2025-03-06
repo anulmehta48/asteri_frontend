@@ -22,18 +22,22 @@ const Header = () => {
   //   // Function to initialize Google Translate with only English and French
   //   window.googleTranslateElementInit = () => {
   //     new window.google.translate.TranslateElement(
-  //       { pageLanguage: "en", includedLanguages: "en,fr", autoDisplay: true },
+  //       { pageLanguage: "en", includedLanguages: "en,fr", autoDisplay: false },
   //       "google_translate_element"
   //     );
   //   };
 
   //   addGoogleTranslateScript();
   // }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = "fr"; // Set French as the detected language
+  }, []);
   return (
     <div className="flex justify-between items-center bg-black">
       <Title />
-      {/* <div id="google_translate_element"></div> */}
-      <LanguageSelector/>
+      {/* <div id="google_translate_element"></div>
+      <LanguageSelector/> */}
     </div>
   );
 };

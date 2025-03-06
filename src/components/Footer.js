@@ -7,10 +7,11 @@ const Footer = () => {
           <div className="space-y-5">
             <div className="flex flex-col gap-2 md:flex-row ">
               <button className="bg-white font-bold rounded-md text-black py-3 border-black md:p-3 cursor-pointer ">
-                Contact us
+                <a href="https://forms.gle/5eqSGb5FvqsS6g8z8"> Contact us </a>
               </button>
+
               <button className="bg-black rounded-md text-white font-bold py-3 border md:p-3 cursor-pointer ">
-                Learn more
+                <a href="mailto:abc@gmail.com"> Learn more</a>
               </button>
             </div>
             <p className=" text-xl md:text-2xl font-light">

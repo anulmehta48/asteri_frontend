@@ -9,10 +9,36 @@ import {
   IMG_TOY_CDN_URL,
   IMG_PROD_CDN_URL,
 } from "../config";
+import { useEffect } from "react";
 
 const Body = () => {
   // const { t } = useTranslation();
   // const {line1,line2}=t("description")
+
+  useEffect(() => {
+    getMymessages();
+  }, []);
+
+  async function getMymessages() {
+    try {
+      const response = await fetch("http://localhost:3000/getmessage", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json(); // Parse response JSON
+      console.log("Fetched Data:", data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
   return (
     <>
       {/* //container-1 */}
@@ -23,22 +49,25 @@ const Body = () => {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative text-white max-w-6xl mx-auto px-4 md:pl-14 ">
           <div className="space-y-4 mt-10 md:space-y-8 md:mt-14">
-            <h1>Hello👋</h1>
+            <h1>Bonjour 👋</h1>
             <h1 className="text-4xl md:text-5xl">
-              <b>Eco-responsible</b> housing
+              Des logements <strong>éco-responsables </strong>
             </h1>
-            <h1 className="text-4xl md:text-5xl">with smart sensors</h1>
+            <h1 className="text-4xl md:text-5xl">
+              avec des capteurs intelligents
+            </h1>
             <p className="text-md pb-3 font-light text-wrap md:font-normal md:font-stretch-50%">
-              Optimize the air conditioning of your vacation homes with
-              efficient energy management.
+              Optimisez la climatisation de vos logements de vacances avec une
+              gestion énergétique efficace.
             </p>
           </div>
           <div className="flex flex-col gap-2 md:flex-row">
             <button className="bg-white font-bold rounded-md text-black py-3 border-black md:p-3 cursor-pointer">
-              Discover the solutions
+              <a href="mailto:abc@gmail.com"> Découvrir les solutions</a>
             </button>
+
             <button className="bg-black rounded-md text-white font-bold py-3 border md:p-3 cursor-pointer ">
-              Contact us
+              <a href="https://forms.gle/5eqSGb5FvqsS6g8z8"> Contactez-nous</a>
             </button>
           </div>
         </div>
@@ -213,6 +242,20 @@ const Body = () => {
           </div>
         </div>
       </div>
+
+      <div className="bg-black py-16">
+        <div className="text-white max-w-6xl mx-auto px-4">
+          <div className="w-full flex justify-center items-center flex-col ">
+            <video className="w-full md:h-[700px] " autoPlay loop muted>
+              <source
+                src="https://tecdn.b-cdn.net/img/video/Tropical.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+
       {/*//container-5 */}
       <div className="bg-white py-5 md:py-16">
         <div className="text-white max-w-6xl mx-2 md:mx-auto md:p-10 bg-black space-y-2.5 rounded-2xl">
@@ -275,7 +318,6 @@ const Body = () => {
                 src={SUTISFY_SVG_URL}
                 alt="sutisfy"
                 className="h-10 invert brightness-0 mb-4"
-                mb-4
               />
               <h1 className="text-3xl">Satisfaction</h1>
               <p className="text-2xl font-light">
